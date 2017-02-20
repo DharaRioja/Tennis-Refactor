@@ -4,8 +4,8 @@ public class TennisGame2 implements TennisGame
 	 public int player1Points = 0;
 	    public int player2Points = 0;
 	    
-	    public String P1res = "";
-	    public String P2res = "";
+	    public String statePlayer1 = "";
+	    public String statePlayer2 = "";
 
 	    public String convertScoreToLiteral(){
 	        String literalScore = "";
@@ -49,26 +49,26 @@ public class TennisGame2 implements TennisGame
 			if (player2Points>player1Points && player2Points < 4)
 	        {
 	            if (player2Points==2)
-	                P2res="Thirty";
+	                statePlayer2="Thirty";
 	            if (player2Points==3)
-	                P2res="Forty";
+	                statePlayer2="Forty";
 	            if (player1Points==1)
-	                P1res="Fifteen";
+	                statePlayer1="Fifteen";
 	            if (player1Points==2)
-	                P1res="Thirty";
-	            literalScore = P1res + "-" + P2res;
+	                statePlayer1="Thirty";
+	            literalScore = statePlayer1 + "-" + statePlayer2;
 	        }
 			if (player1Points>player2Points && player1Points < 4)
 	        {
 	            if (player1Points==2)
-	                P1res="Thirty";
+	                statePlayer1="Thirty";
 	            if (player1Points==3)
-	                P1res="Forty";
+	                statePlayer1="Forty";
 	            if (player2Points==1)
-	                P2res="Fifteen";
+	                statePlayer2="Fifteen";
 	            if (player2Points==2)
-	                P2res="Thirty";
-	            literalScore = P1res + "-" + P2res;
+	                statePlayer2="Thirty";
+	            literalScore = statePlayer1 + "-" + statePlayer2;
 	        }
 			return literalScore;
 		}
@@ -76,26 +76,26 @@ public class TennisGame2 implements TennisGame
 			if (player2Points > 0 && player1Points==0)
 	        {
 	            if (player2Points==1)
-	                P2res = "Fifteen";
+	                statePlayer2 = "Fifteen";
 	            if (player2Points==2)
-	                P2res = "Thirty";
+	                statePlayer2 = "Thirty";
 	            if (player2Points==3)
-	                P2res = "Forty";
+	                statePlayer2 = "Forty";
 	            
-	            P1res = "Love";
-	            literalScore = P1res + "-" + P2res;
+	            statePlayer1 = "Love";
+	            literalScore = statePlayer1 + "-" + statePlayer2;
 	        }
 			if (player1Points > 0 && player2Points==0)
 	        {
 	            if (player1Points==1)
-	                P1res = "Fifteen";
+	                statePlayer1 = "Fifteen";
 	            if (player1Points==2)
-	                P1res = "Thirty";
+	                statePlayer1 = "Thirty";
 	            if (player1Points==3)
-	                P1res = "Forty";
+	                statePlayer1 = "Forty";
 	            
-	            P2res = "Love";
-	            literalScore = P1res + "-" + P2res;
+	            statePlayer2 = "Love";
+	            literalScore = statePlayer1 + "-" + statePlayer2;
 	        }
 			return literalScore;
 		}
